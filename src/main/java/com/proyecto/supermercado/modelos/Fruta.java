@@ -1,8 +1,6 @@
 package com.proyecto.supermercado.modelos;
 
-/**
- * Fruta
- */
+/** Fruta */
 public class Fruta extends Producto {
   private String unidadVenta;
 

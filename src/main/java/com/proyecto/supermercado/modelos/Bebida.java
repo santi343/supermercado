@@ -1,8 +1,6 @@
 package com.proyecto.supermercado.modelos;
 
-/**
- * Gaseosa
- */
+/** Gaseosa */
 public class Bebida extends Producto {
   private Double unidadVenta;
 

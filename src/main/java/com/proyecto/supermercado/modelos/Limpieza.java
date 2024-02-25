@@ -1,8 +1,6 @@
 package com.proyecto.supermercado.modelos;
 
-/**
- * Limpieza
- */
+/** Limpieza */
 public class Limpieza extends Producto {
   private Integer unidadVenta;
 
@@ -19,5 +17,4 @@ public class Limpieza extends Producto {
     cadena += " ///  Precio: $" + precio;
     return cadena;
   }
-
 }

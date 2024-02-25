@@ -1,8 +1,6 @@
 package com.proyecto.supermercado.modelos;
 
-/**
- * Producto
- */
+/** Producto */
 public abstract class Producto implements Comparable<Producto> {
   protected String nombre;
   protected Integer precio;

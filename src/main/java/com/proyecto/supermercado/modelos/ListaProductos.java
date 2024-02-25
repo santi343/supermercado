@@ -3,42 +3,51 @@ package com.proyecto.supermercado.modelos;
 import java.util.ArrayList;
 import java.util.Collections;
 
-/**
- * Lista
- */
+/** Lista */
 public class ListaProductos {
-  ArrayList<Producto> lista;
+  private ArrayList<Producto> listaProductos;
 
   public ListaProductos() {
-    this.lista = new ArrayList<>();
+    listaProductos = new ArrayList<>();
   }
 
-  public void agregarUnProducto(Producto unProducto) {
-    lista.add(unProducto);
+  public void agregarProducto(Producto producto) {
+    listaProductos.add(producto);
   }
 
   public void mostrarLista() {
-    lista.forEach(System.out::println);
+    if (!listaProductos.isEmpty()) {
+      listaProductos.forEach(System.out::println);
+    } else {
+      mensajeListaVacia();
+    }
   }
 
   public void mostrarProductoMayorCosto() {
-    if (!lista.isEmpty()) {
+    if (!listaProductos.isEmpty()) {
       System.out.println(productoMayorCosto().getNombre());
+    } else {
+      mensajeListaVacia();
     }
   }
 
   public void mostrarProductoMenorCosto() {
-    if (!lista.isEmpty()) {
+    if (!listaProductos.isEmpty()) {
       System.out.println(productoMenorCosto().getNombre());
+    } else {
+      mensajeListaVacia();
     }
   }
 
+  private void mensajeListaVacia() {
+    System.out.println("Lista de productos vacia");
+  }
+
   private Producto productoMayorCosto() {
-    return Collections.max(this.lista);
+    return Collections.max(listaProductos);
   }
 
   private Producto productoMenorCosto() {
-    return Collections.min(this.lista);
+    return Collections.min(listaProductos);
   }
-
 }
