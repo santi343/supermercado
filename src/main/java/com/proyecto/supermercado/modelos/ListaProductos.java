@@ -40,7 +40,7 @@ public class ListaProductos {
   }
 
   private void mensajeListaVacia() {
-    System.out.println("Lista de productos vacia");
+    System.out.println("Lista de Productos vacía");
   }
 
   private Producto productoMayorCosto() {
